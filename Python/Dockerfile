@@ -1,5 +1,7 @@
-FROM python:3.9.18
+FROM python:3.10-alpine
 WORKDIR /app
-COPY . .
-RUN pip install -r requirements.txt
-CMD ["python", "./app.py"]
+COPY requirements.txt /app
+RUN pip3 install -r requirements.txt
+COPY . /app
+ENTRYPOINT ["python3"]
+CMD ["app.py"]
