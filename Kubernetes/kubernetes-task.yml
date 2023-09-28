@@ -24,3 +24,10 @@ spec:
         ports:
         - containerPort: 5900
           protocol: TCP
+        resources:
+          requests:
+            cpu: 10m
+            memory: 50Mi
+          limits:          
+            cpu: 10m
+            memory: 50Mi
